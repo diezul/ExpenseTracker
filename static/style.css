@@ -1,0 +1,422 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('static/bg.jpg'); /* Ensure the path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #f8f8f8 !important;
+    background-color: #0f0f0f !important;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #b799ff;
+    font-weight: bold;
+}
+
+.auth-container, .login-container, .register-container {
+    max-width: 400px; /* Set a maximum width */
+    width: 95%; /* Set width to 95% */
+    margin: 50px auto; /* Center it horizontally */
+    padding: 30px;
+    background-color: rgba(30, 30, 30, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.container{
+    width: 100%; /* Set width to 95% */
+    margin: 50px auto; /* Center it horizontally */
+    background-color: rgba(30, 30, 30, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.auth-container form, .login-container form, .register-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-container button, .login-container button, .register-container button, .cool-button {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #6200ea !important; /* Use the same background color */
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer;
+    margin: 10px 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-container button:hover, .login-container button:hover, .register-container button:hover, .cool-button:hover {
+    background-color: #3700b3 !important; /* Same hover effect */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+}
+
+input, select, textarea {
+    width: 100% !important;
+    padding: 10px !important;
+    margin: 10px 0 !important;
+    border: 1px solid #333 !important;
+    border-radius: 5px !important;
+    background-color: #2c2c2c !important;
+    color: #e0e0e0 !important;
+    box-sizing: border-box !important; /* Ensure padding is included in the width */
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #2c2c2c !important; /* Ensure focus background doesn't change */
+    color: #e0e0e0 !important;
+    border-color: #6200ea !important;
+    outline: none !important; /* Remove default outline */
+}
+
+button {
+    background-color: #6200ea !important;
+    color: #ffffff !important;
+    cursor: pointer;
+    padding: 10px 20px !important;
+    margin: 10px 0 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    width: auto !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #3700b3 !important;
+}
+
+/* Table Styles */
+.table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8) !important;
+    color: #e0e0e0 !important;
+    background-color: #141414 !important; /* Dark background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure border-radius applies */
+}
+
+.table th, .table td {
+    padding: 10px !important;
+    text-align: center !important; /* Center horizontally */
+    vertical-align: middle !important; /* Center vertically */
+    border: 1px solid #444 !important; /* Slightly lighter border */
+}
+
+.table th {
+    background-color: #6200ea !important;
+    color: #000000 !important; /* Light purple text */
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #1f1f1f !important; /* Slightly lighter row for even rows */
+}
+
+.table tr:nth-child(odd) {
+    background-color: #151515 !important; /* Slightly darker row for odd rows */
+}
+
+/* Hover effects */
+.table tr:hover {
+    background-color: #282828 !important; /* Highlight row */
+}
+
+.table tr:hover td {
+    border: 1px solid #6200ea !important; /* Purple border around hovered row */
+}
+
+/* Highlight column on row hover */
+.table td:hover {
+    background-color: #282828 !important; /* Highlight cell */
+}
+
+.table td:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid #6200ea !important; /* Purple border around hovered cell */
+    z-index: -1;
+}
+
+.table td, .table th {
+    position: relative; /* For absolute positioning of the hover effect */
+}
+
+/* Modern Neon-like Effect */
+.table tr:hover {
+    box-shadow: 0 0 10px #6200ea, 0 0 20px #6200ea, 0 0 30px #6200ea; /* Neon glow */
+}
+
+.table td {
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.table th, .table td {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+/* Highlight entire column on row hover */
+.table tr:hover td {
+    background-color: #1e1e1e !important; /* Highlight entire column */
+}
+
+
+/* Notification Styles */
+.notification {
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    background-color: #333 !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+    opacity: 0 !important;
+    transition: opacity 0.5s !important;
+}
+
+.notification.show {
+    opacity: 1 !important;
+}
+
+/* Suggestions Box */
+.suggestions {
+    position: absolute !important;
+    background-color: #323232 !important;
+    border: 1px solid #252525 !important;
+    border-radius: 5px !important;
+    margin-top: -15px !important;
+    max-height: 180px !important;
+    overflow-y: auto !important;
+    z-index: 1000 !important;
+    display: none; /* Initially hidden */
+}
+
+.suggestion-item {
+    padding: 4px 8px !important; /* Adjust padding to make it more compact */
+    background-color: #4a4a4a !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important; /* Center items vertically */
+    justify-content: space-between !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none !important;
+}
+
+.suggestion-item:hover {
+    background-color: #6a6a6a !important;
+}
+
+.delete-service {
+    background: none !important;
+    border: none !important;
+    color: blue !important; /* Change color to blue */
+    cursor: pointer !important;
+    font-size: 1rem !important;
+    width: auto !important; /* Ensure the button is not 100% wide */
+}
+
+/* Additional Styles for Index Page */
+.container-row {
+    display: flex !important;
+    justify-content: space-around !important;
+    gap: 20px !important;
+    flex-wrap: wrap !important;
+}
+
+.expense-category {
+    margin-bottom: 40px !important;
+    text-align: center !important;
+}
+
+.expense-category h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 20px !important;
+}
+
+.expense-category form {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.expense-category label {
+    margin-bottom: 5px !important;
+    font-weight: bold !important;
+}
+
+.expense-category .form-group {
+    margin-bottom: 20px !important; /* Add spacing between form groups */
+}
+
+.expense-category input, .expense-category select, .expense-category button {
+    margin-bottom: 15px !important;
+    padding: 7px !important;
+    font-size: 1rem !important;
+    border: 1px solid #333 !important;
+    border-radius: 20px !important;
+    background-color: #2c2c2c !important;
+    color: #e0e0e0 !important;
+}
+
+.expense-category button {
+    background-color: #6200ea !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+}
+
+.expense-category button:hover {
+    background-color: #3700b3 !important;
+}
+
+.expense-tables {
+    padding: 15px !important; /* Add padding inside tables */
+    margin-bottom: 15px !important; /* Add margin below tables */
+}
+
+.expense-tables .form-group {
+    margin-bottom: 20px !important;
+}
+
+/* Dark Mode for Modals */
+.modal-content {
+    background-color: #1e1e1e !important;
+    color: #f8f8f8 !important;
+    border: none !important;
+    border-radius: 10px !important;
+}
+
+.modal-header, .modal-footer {
+    border: none !important;
+}
+
+.table td, .table th {
+    padding: .6rem !important;
+}
+
+.btn {
+    padding: .3rem 0.4rem !important;
+    margin: 2px !important;
+}
+
+/* Custom modal styles */
+.modal-dialog {
+    max-width: 90%; /* Reduce the maximum width to 90% of the screen */
+    margin: 30px auto; /* Center the modal horizontally */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    min-height: calc(100vh - 60px); /* Ensure the modal takes up the full viewport height minus some space */
+}
+
+input:focus + .suggestions {
+    display: block !important; /* Show suggestions on input focus */
+}
+
+@media (max-width: 768px) {
+
+    table{
+        font-size: 0.85rem!important;
+    }
+
+    .btn{
+        font-size: 0.85rem !important;
+    }
+    .container, .auth-container, .login-container, .register-container {
+        width: 95% !important; /* Set width to 95% */
+        padding: 20px !important;
+    }
+
+    .auth-container button {
+        display: block !important;
+        margin: 0 auto !important; /* Center the button on mobile */
+    }
+
+    .login-container, .register-container {
+        width: 95% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .container-row .container {
+        flex: 1 !important;
+        align-items: normal !important;
+        align-self: center !important;
+        padding: 20px !important;
+        margin: 0% 10% !important; /* Ensure margin auto for horizontal centering */
+    }
+
+    .modal-dialog {
+        max-width: 95%; /* Increase the maximum width to 95% for smaller screens */
+        margin: 30px auto; /* Center the modal horizontally */
+        min-height: calc(100vh - 60px); /* Ensure the modal takes up the full viewport height minus some space */
+    }
+    .btn {
+        padding: 5px 10px !important;
+        margin: 2px !important;
+    }
+    .table td, .table th {
+        padding: .3rem !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-row {
+        flex-wrap: nowrap !important;
+    }
+
+    .container-row .container {
+        flex: 1 !important;
+        margin: 30px !important;
+        align-items: normal !important;
+        align-self: center !important;
+        padding: 60px !important;
+    }
+
+    .container-row .container:nth-child(3) {
+        flex-basis: 100% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .container{
+    font-size: 1.2rem !important;
+    max-width: 960px !important;
+    }
+}
